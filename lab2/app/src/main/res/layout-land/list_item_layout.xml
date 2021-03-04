@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="?android:colorBackground"
+    android:elevation="2dp"
+    android:layout_margin="16dp"
+    android:paddingBottom="16dp"
+    >
+
+    <ImageView
+        android:id="@+id/list_item_img"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+        android:contentDescription="@string/news_image_placeholder_text"
+
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+
+        android:src="@drawable/news1"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/list_item_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:padding="@dimen/extended_padding"
+        android:text="Заголовок"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="@dimen/header_text_size"
+        android:textStyle="bold"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/list_item_img" />
+
+    <TextView
+        android:id="@+id/list_item_date"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/list_item_header"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:textSize="@dimen/text_size"
+        android:text="Дата"
+        android:paddingHorizontal="@dimen/extended_padding"
+        />
+
+    <TextView
+        android:id="@+id/list_item_cut"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:textColor="?android:textColorPrimary"
+        android:textSize="@dimen/text_size"
+        android:text="Текст новости"
+        android:paddingHorizontal="@dimen/extended_padding"
+        android:paddingVertical="@dimen/default_padding"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/list_item_date"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
