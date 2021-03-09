@@ -5,10 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/news_recycler_view"
@@ -17,5 +13,5 @@
             android:layout_height="wrap_content"
             android:elevation="0dp"
             />
-    </LinearLayout>
+
 </android.widget.ScrollView>

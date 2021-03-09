@@ -32,11 +32,11 @@ class NewsListAdapter(private val newsList: Array<News>) : RecyclerView.Adapter<
     }
 
     override fun getItemCount(): Int {
-        return newsList.size
+        return newsList.size * 1000
     }
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
-        val newsItem:News = newsList[position]
+        val newsItem:News = newsList[position % newsList.size]
         holder.headerTextView.text = newsItem.head
         holder.dateTextView.text = newsItem.date
         holder.cutTextView.text = newsItem.cut

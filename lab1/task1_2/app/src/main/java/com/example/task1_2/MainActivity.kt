@@ -40,7 +40,7 @@ class MainActivity : Activity() {
     override fun onRestart() {
         super.onRestart()
         Log.d("task2","MainActivity onRestart() called")
-    }
+    }h
 
     override fun onPause() {
         super.onPause()
