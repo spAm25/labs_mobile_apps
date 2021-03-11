@@ -10,11 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.lab3.News.newsList
 
 class NewsListFragment : Fragment() {
-
-    fun onClickListItem(newsId:Int){
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

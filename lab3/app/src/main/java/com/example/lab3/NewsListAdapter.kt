@@ -24,12 +24,11 @@ class NewsListAdapter(private val newsList: Array<News>,private val onClickCallb
     }
 
     override fun getItemCount(): Int {
-        return newsList.size * 1000
+        return newsList.size
     }
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
-        val newsId = position % newsList.size
-        val newsItem = newsList[newsId]
+        val newsItem = newsList[position]
 
         holder.headerTextView.text = newsItem.head
         holder.dateTextView.text = newsItem.date
@@ -37,7 +36,7 @@ class NewsListAdapter(private val newsList: Array<News>,private val onClickCallb
         holder.imageView.setImageResource(newsItem.image!!)
 
         holder.itemView.setOnClickListener {
-            onClickCallback(position % newsList.size)
+            onClickCallback(position)
         }
     }
 }
